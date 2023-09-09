@@ -6,7 +6,6 @@ html {
     box-sizing: inherit;
 }
 
-
 body {
     font-family: 'Gilroy';
     font-weight: 300;
@@ -25,7 +24,7 @@ body {
 
 /* Header start */
 .header {
-    width: 100%;
+    width: 100vw;
 
     position: fixed;
     top: 0;
@@ -72,7 +71,8 @@ body {
     padding-top: 280px;
     padding-bottom: 448px;
 
-    background: url(../img/background.png) center no-repeat;
+    background: url(../img/background.png) no-repeat;
+    background-position: center bottom;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -336,8 +336,34 @@ body {
 
 /* Footer end */
 
-/* @media (min-width: 320px) and (max-width: 1200px) {
-    body {
-        opacity: 0;
+/* Adaptive start */
+@media (max-width:420px) {
+    .main_wrapper {
+        max-width: 320px;
     }
-} */
+
+
+    /* Header start */
+    .header {
+        font-size: 13px;
+    }
+    
+    /* Header end */
+
+    /* Intro start */
+    .intro {
+        min-height: 200px;
+    }
+
+    .intro_title {
+        font-size: 16px;
+    }
+
+    .intro_description {
+        font-size: 12px;
+    }
+
+    /* Intro end */
+}
+
+/* Adaptive end */
